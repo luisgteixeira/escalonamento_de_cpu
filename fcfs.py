@@ -39,7 +39,10 @@ class FCFS(object):
 		for i,inp in enumerate(inputs):
 			# Primeira entrada nao espera nenhum outro processo
 			if i == 0:
-				# Tempo de retorno do processo e usado para calcular o tempo de retorno de cada processo
+				# Primeira entrada tem como tempo corrente tempo de chegada do processo e tempo de execucao
+				current_time = inp[0]
+
+				# Tempo de retorno do primeiro processo
 				return_time_to_process = inp[1]
 
 				#Primeiro tempo de resposta e zero
