@@ -4,7 +4,7 @@
 import sys
 from fcfs import *
 from sjf import *
-# from rr import *
+from rr import *
 
 def main():
     # Carrega o arquivo em uma lista
@@ -12,11 +12,11 @@ def main():
 
     fcfs = FCFS(lines)
     sjf = SJF(lines)
-    # rr = RR(lines)
+    rr = RR(lines)
 
     print('FCFS', fcfs.output)
     print('SJF', sjf.output)
-    # print('RR', rr.output)
+    print('RR', rr.output)
 
 if __name__ == "__main__":
     main()
