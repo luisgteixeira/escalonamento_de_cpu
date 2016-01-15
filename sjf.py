@@ -5,16 +5,6 @@ import copy
 
 class SJF(object):
 
-	def shortest_job(self, inputs, current_time):
-		# Lista com tempos de execucao
-		input_exec = []
-
-		for i,inp in enumerate(inputs):
-			if inp[0] <= current_time:
-				input_exec.append(inp[1])
-
-		return input_exec.index(min(input_exec))
-
 	def __init__(self, lines):
 		# Copia de 'lines' para nao modificar o arquivo original
 		inputs = copy.deepcopy(lines)
@@ -59,8 +49,6 @@ class SJF(object):
 
 		# Para quando todas as entradas sao atendidas
 		while inputs:
-			# Recebe a posicao do menor job recebido ate o momento
-			input_position = self.shortest_job(inputs, current_time)
 
 			# Lista com tempos de execucao
 			input_exec = []
