@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from file_manager import *
 from fcfs import *
-# from sjf import *
+from sjf import *
 # from rr import *
 
 def main():
@@ -12,11 +11,11 @@ def main():
     lines = sys.stdin.readlines()
 
     fcfs = FCFS(lines)
-    # sjf = SJF(lines)
+    sjf = SJF(lines)
     # rr = RR(lines)
 
     print('FCFS', fcfs.output)
-    # print('SJF', sjf.output)
+    print('SJF', sjf.output)
     # print('RR', rr.output)
 
 if __name__ == "__main__":
